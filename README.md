@@ -1,6 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Note Taking App
+
+A modern note-taking application built with Next.js, TypeScript, and Prisma.
+
+## Features
+
+- User authentication and management
+- Create, edit, and archive notes
+- Clean and modern UI with Tailwind CSS
+- PostgreSQL database with Prisma ORM
 
 ## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- PostgreSQL database
+- npm or yarn
+
+### Database Setup
+
+1. Create a PostgreSQL database
+2. Copy `.env.example` to `.env` and update the `DATABASE_URL`:
+   ```
+   DATABASE_URL="postgresql://username:password@localhost:5432/notetaking_app?schema=public"
+   ```
+3. Run database migrations:
+   ```bash
+   npm run db:generate
+   npm run db:push
+   ```
+
+### Development
 
 First, run the development server:
 
@@ -17,6 +47,13 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+### Database Commands
+
+- `npm run db:generate` - Generate Prisma client
+- `npm run db:push` - Push schema changes to database
+- `npm run db:migrate` - Create and run migrations
+- `npm run db:studio` - Open Prisma Studio for database management
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
