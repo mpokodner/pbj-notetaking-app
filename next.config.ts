@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   experimental: {
     serverComponentsExternalPackages: [],
   },
+  // For GitHub Pages deployment
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   // Ensure the app only runs on localhost:3000
   env: {
     HOSTNAME: "localhost",

@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start -H localhost -p 3000",
     "lint": "next lint",
+    "export": "next build && next export",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
