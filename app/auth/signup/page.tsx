@@ -47,7 +47,7 @@ export default function SignUp() {
           text: "Magic link sent! Check your email and click the link to complete your registration.",
         });
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage({
         type: "error",
         text: "An unexpected error occurred. Please try again.",
@@ -72,7 +72,8 @@ export default function SignUp() {
             Create your account
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Enter your details and we'll send you a magic link to get started
+            Enter your details and we&apos;ll send you a magic link to get
+            started
           </p>
         </div>
 
@@ -80,7 +81,7 @@ export default function SignUp() {
           <CardHeader>
             <CardTitle className="text-center">Sign Up</CardTitle>
             <CardDescription className="text-center">
-              We'll send you a magic link to create your account securely
+              We&apos;ll send you a magic link to create your account securely
             </CardDescription>
           </CardHeader>
           <CardContent>

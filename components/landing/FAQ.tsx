@@ -85,7 +85,7 @@ export default function FAQ() {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-4">
-            Still have questions? We're here to help!
+            Still have questions? We&apos;re here to help!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors">

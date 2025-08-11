@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H localhost -p 3000",
-    "build": "next build",
-    "start": "next start -H localhost -p 3000",
+    "dev": "next dev",
+    "build": "prisma generate --no-engine && next build",
+    "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
     "db:generate": "prisma generate",

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,7 @@ export default function SignIn() {
     type: "success" | "error";
     text: string;
   } | null>(null);
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ export default function SignIn() {
           text: "Magic link sent! Check your email and click the link to sign in.",
         });
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage({
         type: "error",
         text: "An unexpected error occurred. Please try again.",
@@ -72,7 +72,7 @@ export default function SignIn() {
             Sign in to your account
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Enter your email address and we'll send you a magic link
+            Enter your email address and we&apos;ll send you a magic link
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function SignIn() {
           <CardHeader>
             <CardTitle className="text-center">Sign In</CardTitle>
             <CardDescription className="text-center">
-              We'll send you a magic link to sign in securely
+              We&apos;ll send you a magic link to sign in securely
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -144,7 +144,7 @@ export default function SignIn() {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link
                   href="/auth/signup"
                   className="font-medium text-blue-600 hover:text-blue-500"
