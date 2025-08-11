@@ -14,6 +14,20 @@ const nextConfig: NextConfig = {
   //   HOSTNAME: "localhost",
   //   PORT: "3000",
   // },
+  experimental: {
+    // Enable better handling of platform-specific binaries
+  },
+  webpack: (config, { isServer }) => {
+    // Handle platform-specific binaries
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
