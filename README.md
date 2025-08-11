@@ -55,7 +55,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - `npm run db:migrate` - Create and run migrations
 - `npm run db:studio` - Open Prisma Studio for database management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Inter](https://fonts.google.com/specimen/Inter), a modern font family.
+This project uses system fonts for optimal performance and compatibility across different deployment environments.
 
 ## Learn More
 
